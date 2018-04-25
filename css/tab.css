@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+p {
+    margin: 0;
+}
+
+/* .tab-normal */
+.tab-normal {
+    width: 600px;
+    height: 300px;
+    margin: 100px auto;
+    border: 2px solid #ebeef5;
+    border-radius: 5px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+}
+.tab-normal .tab-bar {
+    border-bottom: 2px solid #e4e7ed;
+    display: flex;
+}
+.tab-normal .tab-bar > li {
+    cursor: pointer;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tab-normal .tab-bar > li:hover {
+    color: #00A2E8;
+}
+.tab-normal .tab-bar .text {
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+.tab-normal .tab-bar > li.active .text {
+    color: #00A2E8;
+}
+.tab-normal .tab-bar > li.active .text::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #00A2E8;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+}
+.tab-normal .tab-content > li {
+    display: none;
+}
+.tab-normal .tab-content > li.active {
+    display: block;
+}
+
+/* .tab-triangle */
+.tab-triangle {
+    width: 600px;
+    margin: 100px auto;
+    padding: 0 30px 30px;
+    background-color: rgba(24, 24, 21, .75);
+}
+.tab-triangle .tab-bar {
+    margin-bottom: 15px;
+    display: flex;
+}
+.tab-triangle .tab-bar > li {
+    padding-top: 24px;
+    color: #ccc;
+    cursor: pointer;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tab-triangle .tab-bar > li.active {
+    color: #fff;
+}
+.tab-triangle .tab-content > li {
+    display: none;
+    position: relative;
+}
+.tab-triangle .tab-content > li.active {
+    display: block;
+}
+.tab-triangle .tab-content .triangle {
+    width: 0;
+    height: 0;
+    border: 10px solid;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    left: 49px;
+    top: -20px;
+}
+.tab-triangle .tab-content > li:nth-child(2) .triangle {
+    left: 157px;
+}
+.tab-triangle .tab-content > li:nth-child(3) .triangle {
+    left: 265px;
+}
+.tab-triangle .tab-content > li:nth-child(4) .triangle {
+    left: 373px;
+}
+.tab-triangle .tab-content > li:nth-child(5) .triangle {
+    left: 481px;
+}
+.tab-triangle .tab-content input {
+    width: 100%;
+    padding: 12px 0 12px 30px;
+    border-width: 0;
+    border-radius: 5px;
+    outline: none;
+    line-height: 24px;
+    font-size: 16px;
+    display: inline-block;
+}
