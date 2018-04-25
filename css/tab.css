@@ -31,7 +31,6 @@ p {
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 .tab-normal .tab-bar > li:hover {
     color: #00A2E8;
@@ -72,13 +71,13 @@ p {
     display: flex;
 }
 .tab-triangle .tab-bar > li {
+    height: 48px;
     padding-top: 24px;
+    line-height: 24px;
+    text-align: center;
     color: #ccc;
     cursor: pointer;
     flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .tab-triangle .tab-bar > li.active {
     color: #fff;

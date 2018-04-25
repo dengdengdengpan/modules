@@ -9,12 +9,12 @@ let Tab = (function() {
         this.contentLis = this.target.querySelectorAll('.tab-content > li');
     };
     _Tab.prototype.bindEvent = function() {
-        let that = this;
+        let selectedTab = this;
         this.barLis.forEach(function(barLi) {
             barLi.addEventListener('click',function(event) {
                 let clickedLi = event.currentTarget;
-                let index = Array.prototype.indexOf.call(that.barLis,clickedLi);
-                that.show(index);
+                let index = Array.prototype.indexOf.call(selectedTab.barLis,clickedLi);
+                selectedTab.show(index);
             });
         })
     };
