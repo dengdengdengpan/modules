@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>sticky 组件</title>
+        <style>
+            /*user write*/
+            body {
+                margin: 0;
+                padding: 0;
+                color: white;
+            }
+            .top-bar {
+                height: 60px;
+                background-color: green;
+            }
+            .top-bar.sticky {
+                width: 100%;
+            }
+            .content {
+                height: 1500px;
+                background-color: salmon;
+            }
+            .content .nothing {
+                height: 300px;
+                background-color: pink;
+            }
+            .content .demo {
+                height: 70px;
+                background-color: orange;
+            }
+            .content .btn-sticky {
+                width: 200px;
+                height: 40px;
+                border-width: 0;
+                line-height: 40px;
+            }
+
+            /*css 只提供以下内容*/
+            .sticky {
+                position: fixed;
+                left: 0;
+                top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="top-bar">top bar</div>
+        <div class="content">
+            <div class="nothing">just to fake content</div>
+            <div class="demo">.demo need to be sticky</div>
+            <div class="nothing">just to fake content</div>
+            <button class="btn-sticky">btn-sticky need to be sticky</button>
+            <p>hello hello hello hi</p>
+            <p>hello hello hello hi</p>
+            <p>hello hello hello hi</p>
+            <p>hello hello hello hi</p>
+        </div>
+        <script src="./js/jquery-3.3.1.min.js"></script>
+        <!-- <script src="./js/sticky-jq.js"></script> -->
+        <script src="./js/sticky-js.js"></script>
+    </body>
+</html>
