@@ -17,23 +17,27 @@ let Sticky = (function() {
         if (!elements.length) {
             elements = [elements];
         }
-        for (var i = elements.length - 1; i >= 0; i--) {
-            let child = (i > 0) ? wrapper.cloneNode(true) : wrapper;
-            let element = elements[i];
-            let parent = element.parentNode;
-            let sibling = element.nextSibling;
-            child.appendChild(element);
+        for (var i = 0; i < elements.length; i++) {
+            //记录下此时elements[i]的元素父节点和紧跟其后的同级元素节点
+            let parent = elements[i].parentElement;
+            let sibling = elements[i].nextElementSibling;
+            //将elements[i]作为wrapper的最后一个子节点插入，此时elements[i]从DOM中移除
+            wrapper.appendChild(elements[i]);
+            
             if (sibling) {
-                parent.insertBefore(child, sibling);
+                parent.insertBefore(wrapper,sibling);
             } else {
-                parent.appendChild(child);
+                parent.appendChild(wrapper);
             }
-        }    
+        }   
     }
     _Sticky.prototype.addPlaceholder = function() {
         let stickyWrap = document.createElement('div');
         stickyWrap.setAttribute('class','sticky-placeholder');
         this.wrap(stickyWrap,this.target);
+        let targetHeight = this.target.offsetHeight;
+        console.log(targetHeight)
+        this.target.parentElement.style.height = targetHeight + 'px';
     };
     _Sticky.prototype.bindEvent = function() {
         window.addEventListener('scroll',() => {
