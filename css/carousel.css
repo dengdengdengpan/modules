@@ -33,16 +33,15 @@ a {
     overflow: hidden;
     position: relative;
 }
-.carousel .img-container {
-    width: 3020px;
-    z-index: -5;
+.carousel .img-list {
     position: absolute;
 }
-.carousel .img-container .item {
+.carousel .img-list .item {
     float: left;
 }
 .carousel .item > a {
     display: block;
+    line-height: 0;
 }
 .carousel .item img {
     width: 755px;
@@ -57,6 +56,10 @@ a {
     font-size: 20px;
     color: #fff;
     cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    z-index: 5;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -72,6 +75,7 @@ a {
 }
 
 .carousel .pagination {
+    z-index: 5;
     position: absolute;
     bottom: 30px;
     left: 50%;
