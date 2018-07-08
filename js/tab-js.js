@@ -16,7 +16,7 @@ let Tab = (function() {
                 let index = Array.prototype.indexOf.call(selectedTab.barLis,clickedLi);
                 selectedTab.show(index);
             });
-        })
+        });
     };
     _Tab.prototype.show = function(index) {
         this.barLis.forEach(function(barLi) {

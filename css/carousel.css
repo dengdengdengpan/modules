@@ -1,0 +1,40 @@
+/* reset css */
+body {
+    margin: 0;
+}
+ul {
+    margin: 0;
+    padding-left: 0;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* common css */
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* carousel css */
+.carousel {
+    width: 750px;
+    overflow: hidden;
+}
+.carousel .img-container {
+    width: 3000px;
+}
+.carousel .img-container .item {
+    float: left;
+}
+.carousel .item > a {
+    display: block;
+}
+.carousel .item img {
+    width: 750px;
+    height: 450px;
+}

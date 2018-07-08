@@ -36,8 +36,9 @@ p {
     color: #00A2E8;
 }
 .tab-normal .tab-bar .text {
-    height: 40px;
-    line-height: 40px;
+    padding: 10px 0;
+    line-height: 20px;
+    font-size: 16px;
     position: relative;
 }
 .tab-normal .tab-bar > li.active .text {
@@ -75,6 +76,7 @@ p {
     padding-top: 24px;
     line-height: 24px;
     text-align: center;
+    font-size: 16px;
     color: #ccc;
     cursor: pointer;
     flex-grow: 1;
@@ -110,11 +112,11 @@ p {
 .tab-triangle .tab-content > li:nth-child(5) .triangle {
     left: 481px;
 }
-.tab-triangle .tab-content input {
+.tab-triangle .tab-content .search {
     width: 100%;
     padding: 12px 0 12px 30px;
     border-width: 0;
-    border-radius: 5px;
+    border-radius: 24px;
     outline: none;
     line-height: 24px;
     font-size: 16px;
