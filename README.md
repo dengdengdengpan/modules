@@ -12,3 +12,7 @@
  - [预览地址](https://dengdengdengpan.github.io/modules/sticky.html)
  - [js代码-js版本](https://github.com/dengdengdengpan/modules/blob/master/js/sticky-js.js)
  - [js代码-jq版本](https://github.com/dengdengdengpan/modules/blob/master/js/sticky-jq.js)
+### 3.轮播
+#### 无限轮播
+ - [预览地址](https://dengdengdengpan.github.io/modules/carousel.html)
+ - [js代码](https://github.com/dengdengdengpan/modules/blob/master/js/carousel.js)
